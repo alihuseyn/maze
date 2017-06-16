@@ -1,6 +1,6 @@
 # Maze Problem Task 1
 
-[![StyleCI Badge](https://styleci.io/repos/75506910/shield?style=flat-square&branch=master)](https://styleci.io/repos/94521668/)
+[![StyleCI Badge](https://styleci.io/repos/94521668/shield?style=flat-square&branch=master)](https://styleci.io/repos/94521668/)
 
 Used Algorithm: Recursive algorithm
 
