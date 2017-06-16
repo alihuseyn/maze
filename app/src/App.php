@@ -4,7 +4,6 @@ namespace Task;
 
 class App
 {
-
     /**
      * @var Parser
      */
@@ -20,6 +19,7 @@ class App
     {
         $this->parser = new Parser($input);
         $this->parser->parse();
+
         return $this;
     }
 
@@ -28,5 +28,4 @@ class App
         $this->robot = new Robot($this->parser->getInitialPoint(), $this->parser->getFinalPoint(), $this->parser->getMaze());
         $this->robot->start();
     }
-
 }

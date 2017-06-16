@@ -4,7 +4,6 @@ namespace Task;
 
 class Parser
 {
-
     private $container;
     private $maze;
     private $initialPoint;
@@ -47,7 +46,6 @@ class Parser
         return $this->maze;
     }
 
-
     public function getInitialPoint()
     {
         return $this->initialPoint;
@@ -57,5 +55,4 @@ class Parser
     {
         return $this->finalPoint;
     }
-
 }

@@ -4,7 +4,6 @@ namespace Task;
 
 class Input
 {
-
     public static function read()
     {
         $input = fopen('php://stdin', 'r');
@@ -14,5 +13,4 @@ class Input
         }
         return $container;
     }
-
 }

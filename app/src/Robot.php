@@ -2,7 +2,6 @@
 
 namespace Task;
 
-
 class Robot
 {
     private $initialPoint;
@@ -28,10 +27,10 @@ class Robot
     {
         $this->process($this->initialPoint[0], $this->initialPoint[1]);
         if ($this->success) {
-            echo "-\nSuccessfully Finished!\n-" . PHP_EOL;
+            echo "-\nSuccessfully Finished!\n-".PHP_EOL;
             $this->maze->toString(32);
         } else {
-            echo "-\nFailed :(!\n-" . PHP_EOL;
+            echo "-\nFailed :(!\n-".PHP_EOL;
             $this->maze->toString(31);
         }
     }
@@ -40,6 +39,7 @@ class Robot
     {
         if ($x == $this->finalPoint[0] && $y == $this->finalPoint[1]) {
             $this->success = true;
+
             return true;
         }
         if ($this->maze->get($x, $y) == '#' || $this->maze->get($x, $y) == 'x' || $this->wasHere[$y][$x]) {
@@ -55,25 +55,30 @@ class Robot
         if ($x != 0 && $this->process($x - 1, $y)) {
             $this->correctPath[$y][$x] = true;
             $this->maze->set('+', $x, $y);
+
             return true;
         }
         if ($x != $this->maze->getColumn() - 1 && $this->process($x + 1, $y)) {
             $this->correctPath[$y][$x] = true;
             $this->maze->set('+', $x, $y);
+
             return true;
         }
         if ($y != 0 && $this->process($x, $y - 1)) {
             $this->correctPath[$y][$x] = true;
             $this->maze->set('+', $x, $y);
+
             return true;
         }
         if ($y != $this->maze->getRow() - 1 && $this->process($x, $y + 1)) {
             $this->correctPath[$y][$x] = true;
             $this->maze->set('+', $x, $y);
+
             return true;
         }
 
         $this->maze->set('x', $x, $y);
+
         return false;
     }
 
@@ -81,13 +86,12 @@ class Robot
     {
         $this->step += 1;
         echo PHP_EOL;
-        echo "\033[33m==================================\033[0m" . PHP_EOL;
-        echo "\033[33m=\033[0m" . PHP_EOL;
-        echo "\033[33m=        STEP: " . $this->step . "\033[0m" . PHP_EOL;
-        echo "\033[33m=\033[0m" . PHP_EOL;
-        echo "\033[33m===================================\033[0m" . PHP_EOL;
+        echo "\033[33m==================================\033[0m".PHP_EOL;
+        echo "\033[33m=\033[0m".PHP_EOL;
+        echo "\033[33m=        STEP: ".$this->step."\033[0m".PHP_EOL;
+        echo "\033[33m=\033[0m".PHP_EOL;
+        echo "\033[33m===================================\033[0m".PHP_EOL;
         $this->maze->toString();
         echo PHP_EOL;
     }
-
 }

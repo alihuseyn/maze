@@ -4,7 +4,6 @@ namespace Task;
 
 class Maze
 {
-
     private $grid;
     private $row;
     private $column;
@@ -38,12 +37,14 @@ class Maze
     public function setRow($row)
     {
         $this->row = $row;
+
         return $this;
     }
 
     public function setColumn($column)
     {
         $this->column = $column;
+
         return $this;
     }
 
@@ -67,7 +68,6 @@ class Maze
         return $this->grid[$y][$x];
     }
 
-
     public function toString($color = null)
     {
         if (!is_null($color)) {
@@ -85,5 +85,4 @@ class Maze
             echo "\033[0m";
         }
     }
-
 }
