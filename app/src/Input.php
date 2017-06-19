@@ -32,7 +32,7 @@ class Input
         while (($content = fgets($input)) !== false) {
             array_push($container, $content);
         }
-        
+
         return $container;
     }
 }
