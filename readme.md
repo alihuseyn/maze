@@ -5,6 +5,7 @@
 Used Algorithm: Recursive algorithm
 
 * All inputs located under maze folder.
+* Before executing script, be sure that docker is installed ([Docker](https://www.docker.com/)).
 * First run ```./shell.sh``` under folder
 * Then run ```php index.php < maze/maze1.txt```
 * The result will view. I hope you will like :)
